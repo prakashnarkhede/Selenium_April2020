@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -45,7 +46,7 @@ public class AlertDemo {
 		//al.dismiss();
 		Thread.sleep(2000);
 		Assert.assertEquals(alertText, "This is Alert Text here !!!!!!!");
-
+		
 	}
 	
 	@AfterMethod
