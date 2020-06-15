@@ -26,6 +26,7 @@ public class calculatePremium extends ObjectFactory{
 	
 	@BeforeMethod
 	public void setUP() throws Exception {
+		
 		driver = 	tb.openBrowserAndNavigate();
 		vData = new FillVehicleData(driver);
 		iData = new FillInsurantData(driver);
@@ -58,7 +59,7 @@ public class calculatePremium extends ObjectFactory{
 		options.clickOnNextButton();
 	}
 	
-	//@Test
+	@Test
 	public void Premium_for_VOLVO_Scooter() throws Exception {
 		Map<String, String> testData = er.getTestDataInMap(2);
 
@@ -75,7 +76,7 @@ public class calculatePremium extends ObjectFactory{
 		
 	}
 	
-	//@Test
+	@Test
 	public void Premium_for_Ford_Moped() throws Exception {
 		Map<String, String> testData = er.getTestDataInMap(3);
 
@@ -94,8 +95,8 @@ public class calculatePremium extends ObjectFactory{
 
 	
 	@AfterMethod
-	public void tearDown() {
-	//	driver.close();
+	public void tearDown() throws InterruptedException {
+		driver.quit();
 	}
 
 }

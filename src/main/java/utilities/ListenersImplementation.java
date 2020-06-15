@@ -14,7 +14,6 @@ import com.aventstack.extentreports.Status;
 
 public class ListenersImplementation extends ObjectFactory implements ITestListener{
 
-
 	@Override
 	public void onTestStart(ITestResult result) {
 		test = extent.createTest(result.getMethod().getMethodName());
